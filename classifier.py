@@ -57,8 +57,8 @@ train_x2, train_y2 = SMOTE().fit_resample(train_x2, train_y2) # SMOTE
 print("Classifiers for Paragraph Embedding:")
 print("Logistic Regression Accuracy: ",LogReg(train_x2, train_y2, test_x2, test_y2, 500)) # accuracy: 0.77295
 print("Logistic Elastic Net Accuracy: ",ElasticNet(train_x2, train_y2, test_x2, test_y2, 500)) # accuracy: 0.7726
-print("Ada Boost Accuracy: ", AdaBoost(train_x2, train_y2, test_x2, test_y2, 500)) # accuracy: 
-print("Random Forest Accuracy:", RandForest(train_x2, train_y2, test_x2, test_y2)) # accuracy:
+print("Ada Boost Accuracy: ", AdaBoost(train_x2, train_y2, test_x2, test_y2, 500)) # accuracy: 0.914
+print("Random Forest Accuracy:", RandForest(train_x2, train_y2, test_x2, test_y2)) # accuracy: 0.907
 print("\n\n")
 
 # Sentence Transformer
