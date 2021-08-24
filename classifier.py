@@ -42,22 +42,23 @@ train_x1, train_y1 = SMOTE().fit_resample(train_x1, train_y1) # SMOTE
 print("Classifiers for Batch Sentence Embedding:")
 print("Logistic Regression Accuracy: ",LogReg(train_x1, train_y1, test_x1, test_y1, 500)) # accuracy: 0.7731
 print("Logistic Elastic Net Accuracy: ",ElasticNet(train_x1, train_y1, test_x1, test_y1, 500)) # accuracy: 0.77275
-print("Ada Boost Accuracy: ", AdaBoost(train_x1, train_y1, test_x1, test_y1, 500))
-print("Random Forest Accuracy:", RandForest(train_x1, train_y1, test_x1, test_y1)) # accuracy: 
+print("Ada Boost Accuracy: ", AdaBoost(train_x1, train_y1, test_x1, test_y1, 500)) # accuracy: 0.88145
+print("Random Forest Accuracy:", RandForest(train_x1, train_y1, test_x1, test_y1)) # accuracy: 0.827
 print("\n\n")
 
 # Paragraph Embedding
 print("Loading Data...\n")
 train_x2 = np.loadtxt('train_x_block.txt')
-train_y2 = train_y1
+train_y2 = np.loadtxt('train_y.txt')
 test_x2 = np.loadtxt('test_x_block.txt')
 test_y2 = test_y1
 train_x2, train_y2 = SMOTE().fit_resample(train_x2, train_y2) # SMOTE
 
 print("Classifiers for Paragraph Embedding:")
-print("Logistic Regression Accuracy: ",LogReg(train_x2, train_y2, test_x2, test_y2, 500))
-print("Logistic Elastic Net Accuracy: ",ElasticNet(train_x2, train_y2, test_x2, test_y2, 500))
-print("Ada Boost Accuracy: ", AdaBoost(train_x2, train_y2, test_x2, test_y2, 500))
+print("Logistic Regression Accuracy: ",LogReg(train_x2, train_y2, test_x2, test_y2, 500)) # accuracy: 0.77295
+print("Logistic Elastic Net Accuracy: ",ElasticNet(train_x2, train_y2, test_x2, test_y2, 500)) # accuracy: 0.7726
+print("Ada Boost Accuracy: ", AdaBoost(train_x2, train_y2, test_x2, test_y2, 500)) # accuracy: 
+print("Random Forest Accuracy:", RandForest(train_x2, train_y2, test_x2, test_y2)) # accuracy:
 print("\n\n")
 
 # Sentence Transformer
