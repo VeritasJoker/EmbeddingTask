@@ -5,6 +5,7 @@ Hello, Welcome to the repo for a random NLP task for paragraph embedding and bin
 
 ## Final Results
 <br/>
+
 | Classifier             |  Batch    |  Block   |  Sentence Transformer |
 |  --------------------- | :-------: | :------: | :-------------------: |
 | Logistic               | 0.7731    | 0.77295  | 0.784                 |
